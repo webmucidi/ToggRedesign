@@ -75,10 +75,16 @@ main{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 
 }
 main > h1,h4,p{
     flex: 1 1 33%;
+    max-width: 50%;
+}
+main > img{
+    flex: 1 1 100%;
     max-width: 50%;
 }
 footer{
@@ -90,11 +96,32 @@ footer{
 @media screen and (max-width:480px)  {
     header,main,footer,aside{
         background-color: rgb(196, 225, 115);
+        
+    }
+    main > h1,h4,p{
+        flex: 1 1 100px;
+        max-height: 10%;
+        max-width: 100%;
+    }
+    main > img{
+        flex: 1 1 300px;
+        max-height: 50%;
+        max-width: 100%;
     }
 }
 
 @media (min-width:480px) and (max-width:768px) {
     header,main,footer,aside{
         background-color: rgb(129, 160, 193);
+    }
+    main > h1,h4,p{
+        flex: 1 1 100px;
+        max-height: 20%;
+        max-width: 100%;
+    }
+    main > img{
+        flex: 1 1 300px;
+        max-height: 40%;
+        max-width: 100%;
     }
 }
