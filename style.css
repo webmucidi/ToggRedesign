@@ -4,6 +4,9 @@
     border: 0;
     box-sizing: border-box;
 }
+ul{
+    list-style: none;
+}
 
 body{
 
@@ -15,12 +18,13 @@ body{
     "aside main"
     "aside footer"
     ;
-    grid-template-rows: 150px 1fr 250px;
+    grid-template-rows: 150px 1fr 50px;
     grid-template-columns: minmax(50px,1fr) minmax(400px,10fr);
 }
 
 header,main,footer,aside{
     background-color: rgb(162, 129, 193);
+    padding: 10px;
 }
 aside{
     grid-area: aside;
@@ -54,7 +58,6 @@ header > img{
     justify-content: flex-end;
     align-items: center;  
 
-    list-style: none;
 }
 
 .menu li{
@@ -69,7 +72,9 @@ header > img{
     
 }
 
-
+.slider{
+    display: flex;
+}
 main{
     grid-area: main;
     display: flex;
@@ -79,8 +84,13 @@ main{
     align-items: flex-start;
 
 }
-main > h1,h4,p{
-    flex: 1 1 33%;
+main > h1,h4{
+    flex: 1 1 10%;
+    max-width: 50%;
+
+}
+main > p{
+    flex: 1 1 80%;
     max-width: 50%;
 }
 main > img{
@@ -91,6 +101,7 @@ footer{
     grid-area: footer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width:480px)  {
